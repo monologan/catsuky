@@ -3,6 +3,8 @@
 
 import _ from 'lodash'
 
+import { add } from "./lib/number";
+
 const boton = document.getElementById('buy-now')
 
 boton.addEventListener('click', () => {
@@ -73,4 +75,4 @@ function testLodash() {
 //cargar las cards de gatos y mostrarlas en pantalla.
 getCatCards()
 testLodash()
-console.log(1 + 5);//3
+console.log(add(1 + 5))
