@@ -1,6 +1,8 @@
 //cambia lo que tiene escrito el boton.
 //home
 
+import _ from 'lodash'
+
 const boton = document.getElementById('buy-now')
 
 boton.addEventListener('click', () => {
@@ -62,5 +64,13 @@ const getCatCards = () => {
 
 
 }
+
+function testLodash() {
+    const tittle =document.getElementById('tittle').innerHTML
+    const result = _.upperCase(tittle)
+    console.log(result);
+}
 //cargar las cards de gatos y mostrarlas en pantalla.
 getCatCards()
+testLodash()
+console.log(1 + 5);//3

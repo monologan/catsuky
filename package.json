@@ -4,8 +4,11 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "postcss styles/style.css -o public/styles.css --watch",
-    "prod": " cross-env NODE_ENV=production postcss styles/style.css -o public/styles.css"
+    "bundle": "webpack",
+    "-dev": "postcss styles/style.css -o public/styles.css --watch",
+    "-prod": " cross-env NODE_ENV=production postcss styles/style.css -o public/styles.css",
+    "start": "webpack --mode development --open",
+    "prod": "webpack"
   },
   "repository": {
     "type": "git",
@@ -18,7 +21,8 @@
   },
   "homepage": "https://github.com/monologan/catsuky#readme",
   "dependencies": {
-    "core-util-is": "^1.0.2"
+    "core-util-is": "^1.0.2",
+    "lodash": "^4.17.21"
   },
   "devDependencies": {
     "autoprefixer": "^10.3.3",
@@ -26,6 +30,9 @@
     "postcss": "^8.3.6",
     "postcss-cli": "^8.3.1",
     "tailwindcss": "^2.2.7",
-    "watch": "^1.0.2"
+    "watch": "^1.0.2",
+    "webpack": "^5.51.1",
+    "webpack-cli": "^4.8.0",
+    "webpack-dev-server": "^4.1.0"
   }
 }
